@@ -10,6 +10,9 @@ jobs:
   security-scan:
     name: Security Gate - Gitleaks & Trivy
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
 
     steps:
       # Step 1: Checkout repository with full commit history for secret analysis
@@ -38,7 +41,7 @@ jobs:
           format: 'sarif'
           output: 'trivy-results.sarif'
           severity: 'CRITICAL,HIGH'
-          exit-code: '0' # Non-blocking for report generation
+          exit-code: '0'
 
       # Step 5: Upload SARIF to GitHub Security tab
       - name: Upload Trivy SARIF Report
