@@ -1,4 +1,4 @@
-name: DevSecOps CI Pipeline (DEV-493)
+name: DevSecOps CI Pipeline 
 
 on:
   push:
