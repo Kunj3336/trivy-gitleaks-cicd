@@ -5,6 +5,22 @@ This project evaluates **Gitleaks** (source code secret detection) and **Aqua Se
 
 ---
 
+## R&D Objective
+
+The R&D question for this project is:
+
+> **How can Gitleaks and Trivy be integrated into a CI/CD pipeline to detect exposed secrets and vulnerable container images before deployment?**
+
+The investigation focuses on five areas:
+
+1. **Detection** — What types of security issues can each tool identify?
+2. **Pipeline Placement** — At which stage should each scanner run?
+3. **Security Gates** — Under what conditions should the pipeline stop?
+4. **Reporting** — Which output formats are useful for developers, automation, and security dashboards?
+5. **Deployment Integration** — How could the scanning strategy be extended to a private registry and deployment platform?
+
+---
+
 ## Architecture & Scanning Workflow
 
 ```text
